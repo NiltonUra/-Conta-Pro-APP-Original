@@ -32,11 +32,17 @@ class AddReceitaFragment : Fragment() {
         viewModel.receitas.observe(viewLifecycleOwner) { adapter.setarLista(it) }
 
         binding.buttonAdicionarReceita.setOnClickListener {
+
+            var valor: Double
+
+            try { valor = binding.textViewPrecoReceita.text.toString().replace(',', '.').toDouble() }
+            catch(e: Exception) { valor = 0.0 }
+
             viewModel.addReceita(
                 Receita(
                     id = 0,
                     tipo = binding.spinnerReceita.selectedItem.toString(),
-                    valor = binding.textViewPrecoReceita.text.toString().replace(',', '.').toDouble(),
+                    valor = valor,
                     dataHora = binding.editTextDateReceita.text.toString()
                 )
             )

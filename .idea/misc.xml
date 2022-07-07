@@ -26,6 +26,10 @@
         <entry key="..\:/Users/Renato Marciano/Desktop/Original-NSolucoes-Git/-Conta-Pro-APP-Original/app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="..\:/Users/Renato Marciano/Desktop/Original-NSolucoes-Git/-Conta-Pro-APP-Original/app/src/main/res/layout/fragment_receitas_despesas.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/Renato Marciano/Desktop/Original-NSolucoes-Git/-Conta-Pro-APP-Original/app/src/main/res/menu/nav_menu.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/card_layout.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/despesa_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_despesa.xml" value="0.39593908629441626" />
+        <entry key="app/src/main/res/layout/fragment_receitas_despesas.xml" value="0.25" />
       </map>
     </option>
   </component>

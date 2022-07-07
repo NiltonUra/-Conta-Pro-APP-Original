@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,11 +18,11 @@
         android:id="@+id/textViewValorDespesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="10sp"
-        android:layout_marginHorizontal="10dp"
         android:layout_toStartOf="@+id/textViewTipoDespesa"
         android:layout_toEndOf="@+id/textViewDataDespesa"
-        android:text="R$ 101,00" />
+        android:layout_marginLeft="10dp"
+        android:text="R$ 101,00"
+        android:textSize="10sp" />
 
     <TextView
         android:id="@+id/textViewTipoDespesa"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Trampo de Freela Web"
         android:textSize="10sp"
-        android:paddingStart="32dp"
+        android:layout_marginLeft="60dp"
         android:layout_alignParentEnd="true" />
 
-</RelativeLayout>
+</LinearLayout>

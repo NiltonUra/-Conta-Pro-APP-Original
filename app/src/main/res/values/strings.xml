@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Conta Pro App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Despesas">
+        <item>Alimentação</item>
+        <item>Transporte</item>
+        <item>Roupas</item>
+        <item>Lazer</item>
+        <item>Empréstimos</item>
+        <item>Aluguel</item>
+        <item>Eletrônicos</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="Receitas">
+        <item>Salário</item>
+        <item>Bonificação</item>
+        <item>Benefícios</item>
+        <item>Investimentos</item>
+        <item>Doações</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="Mes">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Setembro</item>
+        <item>Dezembro</item>
+    </string-array>
+</resources>

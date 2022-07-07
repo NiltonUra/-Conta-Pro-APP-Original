@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <TextView
+        android:id="@+id/textConfirmarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ConfirmarSenha"
+        app:layout_constraintStart_toStartOf="@+id/textSenha"
+        app:layout_constraintTop_toBottomOf="@+id/textSenha" />
+
+    <TextView
+        android:id="@+id/textCEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00000-000"
+        app:layout_constraintStart_toStartOf="@+id/textCPF"
+        app:layout_constraintTop_toBottomOf="@+id/textCPF" />
+
+    <TextView
+        android:id="@+id/textSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        app:layout_constraintStart_toStartOf="@+id/textEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="@+id/textComplemento"
+        app:layout_constraintTop_toBottomOf="@+id/textComplemento" />
+
+    <TextView
+        android:id="@+id/textEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SP"
+        app:layout_constraintStart_toStartOf="@+id/textCEP"
+        app:layout_constraintTop_toBottomOf="@+id/textCEP" />
+
+    <TextView
+        android:id="@+id/textCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000.000.000-00"
+        app:layout_constraintStart_toStartOf="@+id/textData"
+        app:layout_constraintTop_toBottomOf="@+id/textData" />
+
+    <TextView
+        android:id="@+id/textComplemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complemento"
+        app:layout_constraintStart_toStartOf="@+id/textBairro"
+        app:layout_constraintTop_toBottomOf="@+id/textBairro" />
+
+    <TextView
+        android:id="@+id/textCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cidade"
+        app:layout_constraintStart_toStartOf="@+id/textEstado"
+        app:layout_constraintTop_toBottomOf="@+id/textEstado" />
+
+    <TextView
+        android:id="@+id/textData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00/00/00"
+        app:layout_constraintStart_toStartOf="@+id/textNome"
+        app:layout_constraintTop_toBottomOf="@+id/textNome" />
+
+    <TextView
+        android:id="@+id/textBairro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bairro"
+        app:layout_constraintStart_toStartOf="@+id/textCidade"
+        app:layout_constraintTop_toBottomOf="@+id/textCidade" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

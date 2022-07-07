@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "371120070864",
+    "project_id": "conta-pro-app",
+    "storage_bucket": "conta-pro-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371120070864:android:b671b00751fad0a100bed5",
+        "android_client_info": {
+          "package_name": "com.nsolucoes.contaproapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371120070864-8hqnme36n39qh9rs8ogkj17ou92fv0ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQa_dV_a5JMrig67ji_WpMqpUOik6toG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "371120070864-8hqnme36n39qh9rs8ogkj17ou92fv0ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

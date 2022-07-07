@@ -67,4 +67,9 @@
             android:id="@+id/action_listDadosFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/editarPerfilFragment"
+        android:name="com.nsolucoes.contaproapp.EditarPerfilFragment"
+        android:label="fragment_editar_perfil"
+        tools:layout="@layout/fragment_editar_perfil" />
 </navigation>

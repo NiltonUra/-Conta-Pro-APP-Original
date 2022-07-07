@@ -21,7 +21,7 @@
         android:icon="@drawable/ic_baseline_content_paste_search_24"
         android:title="Ver Receita e Despesas" />
     <item
-        android:id="@+id/criarContaFragment2"
+        android:id="@+id/editarPerfilFragment"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_person_pin_24"
         android:title="Perfil" />

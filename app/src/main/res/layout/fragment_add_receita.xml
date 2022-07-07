@@ -11,7 +11,7 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".AddReceitaFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="270dp"
         android:layout_marginStart="16dp"
@@ -21,48 +21,51 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView3AddReceita"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="31dp"
-            android:layout_marginTop="13dp"
-            android:text="Data/Hora"
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginHorizontal="5dp">
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="66dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="50dp"
-            android:text="Valor"
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView28"
-            app:layout_constraintStart_toEndOf="@+id/textView3AddReceita"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Data/Hora"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_marginEnd="10dp"/>
 
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="27dp"
-            android:text="Tipo de Despesa"
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Valor"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_marginEnd="10dp"/>
 
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Despesa"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/green"
+                android:layout_marginEnd="10dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceitas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/receita_item" />
+
+    </LinearLayout>
 
     <View
         android:id="@+id/view2"
@@ -142,14 +145,14 @@
             android:layout_width="70dp"
             android:layout_height="54dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/background_card_fundo_layout"
             android:hint="0,00"
-            android:inputType="number"
-            android:textColor="@color/green"
             android:textColorHint="@color/green"
+            android:textColor="@color/green"
             android:textSize="33sp"
             android:textStyle="bold"
+            android:inputType="number"
             app:layout_constraintStart_toEndOf="@+id/textViewCifraoReceita"
             app:layout_constraintTop_toBottomOf="@+id/textViewTituloInformeVarlor2" />
 
@@ -160,6 +163,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
+            android:inputType="datetime"
             android:background="@drawable/bolder"
             android:paddingLeft="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -168,7 +172,7 @@
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinnerReceita"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -179,7 +183,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/buttonAdicionar"
+            android:id="@+id/buttonAdicionarReceita"
             android:layout_width="130dp"
             android:layout_height="45dp"
             android:layout_marginTop="54dp"
@@ -189,7 +193,7 @@
             android:text="Adicionar"
             app:cornerRadius="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner3"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerReceita"
             tools:ignore="TouchTargetSizeCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

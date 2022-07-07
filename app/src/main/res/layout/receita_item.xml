@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginHorizontal="5dp">
+
+    <TextView
+        android:id="@+id/textViewDataReceita"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="26/02/2022 08:01"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewValorReceita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_toStartOf="@+id/textViewTipoReceita"
+        android:layout_toEndOf="@+id/textViewDataReceita"
+        android:text="R$ 101,00" />
+
+    <TextView
+        android:id="@+id/textViewTipoReceita"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Trampo de Freela Web"
+        android:textSize="10sp"
+        android:paddingStart="32dp"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

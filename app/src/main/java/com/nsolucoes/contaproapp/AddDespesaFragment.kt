@@ -37,12 +37,7 @@ class AddDespesaFragment : Fragment() {
         val date = Calendar.getInstance().time
         val formato = SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.getDefault())
 
-        var total = 0
-
-        viewModel.despesas.observe(viewLifecycleOwner) { despesas ->
-            adapter.setarLista(despesas)
-            total = despesas.size
-        }
+        viewModel.despesas.observe(viewLifecycleOwner) { adapter.setarLista(it) }
 
         binding.editTextTextDespesas.setOnClickListener {
             viewModel.addDespesa(
@@ -55,7 +50,11 @@ class AddDespesaFragment : Fragment() {
                 )
 
             )
-            Toast.makeText(binding.root.context, "Despesa Adicionada com sucesso", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                binding.root.context,
+                "Despesa Adicionada com sucesso",
+                Toast.LENGTH_SHORT
+            ).show()
             Log.i("Login", "Despesa Adicionada")
 
         }

@@ -1,11 +1,12 @@
 package com.nsolucoes.contaproapp.data
 
-import com.nsolucoes.contaproapp.data.database.UserDao
+import com.nsolucoes.contaproapp.data.database.MainDao
 import com.nsolucoes.contaproapp.data.database.entities.Despesa
+import com.nsolucoes.contaproapp.data.database.entities.Receita
 import com.nsolucoes.contaproapp.data.database.entities.Usuario
 import kotlinx.coroutines.flow.Flow
 
-class UserRepository(private val dao: UserDao) {
+class UserRepository(private val dao: MainDao) {
 
     val selectUsers = dao.selectUsers()
 
@@ -24,5 +25,12 @@ class UserRepository(private val dao: UserDao) {
     }
 
     val allDespesas = dao.getAllDespesas()
+
+    //Receitas
+    fun addReceita(receita: Receita){
+        dao.addDespesa(receita)
+    }
+
+    val allReceitas = dao.getAllReceitas()
 
 }

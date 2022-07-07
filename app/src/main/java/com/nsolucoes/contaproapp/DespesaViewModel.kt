@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.nsolucoes.contaproapp.data.UserRepository
-import com.nsolucoes.contaproapp.data.database.UserDatabase
+import com.nsolucoes.contaproapp.data.database.AppDatabase
 import com.nsolucoes.contaproapp.data.database.entities.Despesa
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +16,7 @@ class DespesaViewModel(application: Application) : AndroidViewModel(application)
     private val repository: UserRepository
 
     init {
-        val userDao = UserDatabase.getDatabase(application).userDao()
+        val userDao = AppDatabase.getDatabase(application).userDao()
         repository = UserRepository(userDao)
         despesas = repository.allDespesas
     }

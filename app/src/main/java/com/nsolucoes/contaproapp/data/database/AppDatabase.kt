@@ -5,22 +5,23 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.nsolucoes.contaproapp.data.database.entities.Despesa
+import com.nsolucoes.contaproapp.data.database.entities.Receita
 import com.nsolucoes.contaproapp.data.database.entities.Usuario
 
 @Database(
-    entities = [Usuario::class, Despesa::class],
+    entities = [Usuario::class, Despesa::class, Receita::class],
     version = 1, exportSchema = false
 )
-abstract class UserDatabase : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun userDao(): UserDao
+    abstract fun userDao(): MainDao
 
     companion object {
         @Volatile
-        private var INSTANCE: UserDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         //verificar se existe ou não instância
-        fun getDatabase(context: Context): UserDatabase {
+        fun getDatabase(context: Context): AppDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -28,7 +29,7 @@ abstract class UserDatabase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    UserDatabase::class.java,
+                    AppDatabase::class.java,
                     "user_database"
                 ).build()
                 INSTANCE = instance

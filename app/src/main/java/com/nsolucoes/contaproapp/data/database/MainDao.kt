@@ -6,11 +6,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.nsolucoes.contaproapp.data.database.entities.Despesa
+import com.nsolucoes.contaproapp.data.database.entities.Receita
 import com.nsolucoes.contaproapp.data.database.entities.Usuario
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface UserDao {
+interface MainDao {
 
     //Anotação para inserir e ignorar dados duplicados
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -31,4 +32,14 @@ interface UserDao {
     //Pegar Despesas
     @Query("SELECT * FROM despesa_table")
     fun getAllDespesas(): LiveData<List<Despesa>>
+
+
+    //Inserir Receita
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    fun addDespesa(receita: Receita)
+
+    //Pegar Despesas
+    @Query("SELECT * FROM receita_table")
+    fun getAllReceitas(): LiveData<List<Receita>>
+
 }

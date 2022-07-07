@@ -35,10 +35,6 @@ class listDadosFragment : Fragment() {
             response -> adapter.setList(response)
         }
 
-        binding.floatingActionButton.setOnClickListener{
-            findNavController().navigate(R.id.action_listDadosFragment_to_loginFragment)
-        }
-
         return binding.root
     }
 }

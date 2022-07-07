@@ -92,6 +92,7 @@
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="textPersonName"
+                android:paddingLeft="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
@@ -131,8 +132,11 @@
                 android:layout_marginStart="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
-                android:hint="           /       /"
+                android:hint="        /       /"
                 android:inputType="date"
+                android:paddingLeft="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCPF"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewNascimento" />
 
@@ -144,6 +148,7 @@
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="number"
+                android:paddingLeft="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCpf" />
 
@@ -165,7 +170,7 @@
                 android:id="@+id/textViewEstado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
+                android:layout_marginStart="110dp"
                 android:layout_marginTop="10dp"
                 android:text="Estado:"
                 android:textColor="#dadada"
@@ -180,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="55dp"
                 android:text="Cidade:"
                 android:textColor="#dadada"
                 android:textColorHint="@color/graydark"
@@ -196,6 +201,7 @@
                 android:layout_marginStart="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
+                android:paddingLeft="14dp"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCep" />
@@ -204,10 +210,13 @@
                 android:id="@+id/editTextEstado"
                 android:layout_width="68dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="6dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="textPersonName"
+                android:paddingLeft="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCidade"
+                app:layout_constraintHorizontal_bias="0.117"
                 app:layout_constraintStart_toEndOf="@+id/editTextNumberCep"
                 app:layout_constraintTop_toBottomOf="@+id/textViewEstado" />
 
@@ -218,6 +227,7 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
+                android:paddingLeft="14dp"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCidade" />
@@ -227,7 +237,7 @@
                 android:id="@+id/textViewComplemento"
                 android:layout_width="119dp"
                 android:layout_height="21dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="44dp"
                 android:text="Complemento:"
                 android:textColor="#dadada"
@@ -241,11 +251,11 @@
                 android:id="@+id/editTextComplemento"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="textPersonName"
+                android:paddingLeft="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewComplemento" />
 
@@ -254,7 +264,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="10dp"
                 android:text="Bairro:"
                 android:textColor="#dadada"
                 android:textColorHint="@color/graydark"
@@ -271,6 +281,9 @@
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="textPersonName"
+                android:paddingLeft="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextComplemento"
+                app:layout_constraintHorizontal_bias="0.046"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewBairro" />
 
@@ -293,9 +306,12 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
                 android:inputType="textPersonName"
+                android:paddingLeft="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
@@ -331,10 +347,13 @@
                 android:id="@+id/editTextSenhaCad"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginEnd="39dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
-                android:inputType="number"
+                android:inputType="textPersonName|textPassword"
+                android:paddingLeft="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/editTextConfirmaSenha"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSenha" />
 
@@ -345,7 +364,8 @@
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/bolder"
                 android:ems="16"
-                android:inputType="number"
+                android:inputType="textPersonName|textPassword"
+                android:paddingLeft="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewConfirmaSenha" />
 
@@ -366,14 +386,16 @@
                 android:id="@+id/buttonCancelar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/red"
                 android:text="Cancelar"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
                 app:cornerRadius="40dp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonConcluir"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewSelfie" />
 
@@ -382,7 +404,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="60dp"
+                android:layout_marginEnd="50dp"
                 android:backgroundTint="@color/green"
                 android:text="Concluir"
                 android:textAllCaps="false"
